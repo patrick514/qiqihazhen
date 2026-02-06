@@ -1,0 +1,4 @@
+# 修改后的配置（取消忽略dist，#代表注释，Git会忽略这行）
+# dist/
+node_modules/
+.DS_Store
