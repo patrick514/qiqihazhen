@@ -7,11 +7,6 @@ import path from "path";
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: "./", // 必加：相对路径，解决资源404
-
-  build: {
-    outDir: "docs", // 核心：打包输出到docs文件夹（代替dist）
-  },
   plugins: [
     vue(),
     AutoImport({
@@ -21,6 +16,11 @@ export default defineConfig({
       resolvers: [ElementPlusResolver()],
     }),
   ],
+  base: "./", // 必加：相对路径，解决资源404
+
+  build: {
+    outDir: "docs", // 核心：打包输出到docs文件夹（代替dist）
+  },
   server: {
     port: 8080,
   },
